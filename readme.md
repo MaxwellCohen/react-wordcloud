@@ -20,9 +20,6 @@ Note that `react-wordcloud` requires `react^16.13.0` as a peer dependency.
 import React from 'react';
 import ReactWordcloud from 'react-wordcloud';
 
-import 'tippy.js/dist/tippy.css';
-import 'tippy.js/animations/scale.css';
-
 const words = [
   {
     text: 'told',
@@ -47,8 +44,6 @@ function SimpleWordcloud() {
 }
 ```
 
-By default, `ReactWordcloud` is configured with animated tooltips enabled and requires CSS for styling. Tippy provides base styling in the resources above or you can create your own.
-
 ### Kitchen Sink
 
 An example showing various features (callbacks, options, size).
@@ -58,7 +53,6 @@ const callbacks = {
   getWordColor: word => word.value > 50 ? "blue" : "red",
   onWordClick: console.log,
   onWordMouseOver: console.log,
-  getWordTooltip: word => `${word.text} (${word.value}) [${word.value > 50 ? "good" : "bad"}]`,
 }
 const options = {
   rotations: 2,
@@ -121,6 +115,6 @@ Features supported:
 
 ## Contributing
 
-The code is written in `typescript`, linted with `xo`, and built with `microbundle`. Examples and documentations are built with `docz`.
+The code is written in `typescript`, linted with `oxlint`, and built with `rolldown`.
 
 Feel free to contribute by submitting a pull request.

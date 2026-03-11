@@ -11,6 +11,5 @@ node_modules
 *.swo
 
 # project
-.docz
 dist
 package-lock.json

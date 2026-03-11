@@ -5,15 +5,12 @@ import { useResponsiveSvgSelection } from './hooks';
 import { layout } from './layout';
 import { getDefaultColors } from './utils';
 
-export const defaultCallbacks = {
-  getWordTooltip: ({ text, value }) => `${text} (${value})`,
-};
+export const defaultCallbacks = {};
 
 export const defaultOptions = {
   colors: getDefaultColors(),
   deterministic: false,
   enableOptimizations: false,
-  enableTooltip: true,
   fontFamily: 'times new roman',
   fontSizes: [4, 32],
   fontStyle: 'normal',
@@ -22,7 +19,6 @@ export const defaultOptions = {
   rotationAngles: [-90, 90],
   scale: 'sqrt',
   spiral: 'rectangular',
-  tooltipOptions: {},
   transitionDuration: 600,
 };
 

@@ -1,5 +1,5 @@
+import type React from 'react';
 import { EnterElement, Selection as d3Selection } from 'd3-selection';
-import { Props as TippyProps } from 'tippy.js';
 
 /**
  * Types
@@ -33,10 +33,6 @@ export interface Callbacks {
    */
   getWordColor?: WordToStringCallback;
   /**
-   * Set the word tooltip using the word object.
-   */
-  getWordTooltip: WordToStringCallback;
-  /**
    * Capture the word and mouse event on click.
    */
   onWordClick?: WordEventCallback;
@@ -65,10 +61,6 @@ export interface Options {
    * (BETA) This feature is not formally supported.  For more details, refer to the docs.  Enables optimizations for rendering larger wordclouds.  Note that this uses a custom cloud layout that batches the data into smaller subsets.
    */
   enableOptimizations: boolean;
-  /**
-   * Enables/disables the tooltip feature.
-   */
-  enableTooltip: boolean;
   /**
    * Customize the font family.
    */
@@ -118,12 +110,6 @@ export interface Options {
    */
   textAttributes: Record<string, AttributeValue>;
   /**
-   * Additional props object to pass to the tooltip library. For more details,
-   * refer to the documentation for
-   * [Tippy.js Props](https://atomiks.github.io/tippyjs/v6/all-props/).
-   */
-  tooltipOptions: Optional<TippyProps>;
-  /**
    * Sets the animation transition time in milliseconds.
    */
   transitionDuration: number;
@@ -171,4 +157,4 @@ export const defaultCallbacks: CallbacksProp;
 
 export const defaultOptions: OptionsProp;
 
-export default function ReactWordcloud(props: Props): JSX.Element;
+export default function ReactWordcloud(props: Props): React.JSX.Element;
